@@ -1,38 +1,26 @@
-# On local
+# Introduction:
 
-- ## Backend
+This is a web player that allows you and your friends to upload a video and all watch it synchronously on your respective machine.
 
-  - `cd localparty`
-  - `pip install -r requirements.txt`
-  - `redis-server`
-  - `python manage.py runserver`
+# Features:
 
-- ## Frontend
+- Watch local videos along with a group of people with the video synchronized.
 
-  - `cd syncplayer`
-  - `npm start`
+# How to use
 
-# Deploy:
+- Open [this link](https://localsyncplayer.herokuapp.com/),
+- Decide a room name among friends,
+- Enter the room name on the site and connect to the room,
+- Ask everyone to upload the video (that you are watching together),
+- Enjoy!!
 
-- `git init`
-- `heroku login`
+# Features to be added
 
-- ## Backend
-
-  - `heroku create app-name`
-  - `heroku git:remote -a app-name`
-  - `git add .`
-  - `git commit -m "Backend deployment"`
-  - `heroku buildpacks:add heroku/python`
-  - `heroku buildpacks:add --index 1 https://github.com/heroku/heroku-buildpack-multi-procfile`
-  - `heroku config:set PROCFILE=localparty/Procfile`
-  - `git push heroku master`
-
-- ## Frontend
-
-  - `heroku create frontend-app-name -b https://github.com/mars/create-react-app-buildpack.git`
-  - `heroku git:remote -a frontend-app-name`
-  - `git add .`
-  - `git commit -m "Frontend deployment"`
-  - `cd syncplayer/`
-  - `npm run publishToHeroku`
+- Adding subtitles file (from the local),
+- If file chosen from local, label to show where to download it from (helping),
+- Play from given url,
+- Chatting,
+  - Username required,
+  - Show the player events on chatbox (very unnecessary),
+  - Chat messages (obv)
+- Random room name provision,
